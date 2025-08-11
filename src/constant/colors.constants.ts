@@ -1,0 +1,71 @@
+export const COLORS = {
+  PRIMARY: "#2047AB",
+  PRIMARY_HOVER: "#1A3A8B",
+
+  SECONDARY: "#1886FE",
+  SECONDARY_HOVER: "#1470D1",
+
+  STATUS: {
+    SUCCESS: "#31C48E",
+    ERROR: "#F05252",
+    WARNING: "#FFC107",
+    INFO: "#2196F3",
+    INFOHOVER: "#2196E6",
+  },
+
+  NEUTRAL: {
+    WHITE: "#FFFFFF",
+    BLACK: "#000000",
+    GREY: "#9E9E9E",
+    LIGHT_GREY: "#EEEEEE",
+    DARK_GREY: "#424242",
+  },
+
+  TEXT: {
+    PRIMARY: "#000000",
+    SECONDARY: "#1BA672",
+    DISABLED: "#757575",
+    CONTRAST: "#FFFFFF",
+    GREY: "#737A86",
+    DANGER: "#D32F2F",
+  },
+
+  BACKGROUND: {
+    DEFAULT: "#FFFFFF",
+    NAVBAR: "#F9FAFB",
+    CARD: "#FAFAFA",
+    FOOTER: "#000000",
+    GREY: "#F9FAFB",
+    ACTIVE_TAB: "#1B64F3",
+    INACTIVE_TAB: "rgba(0, 0, 0, 0.3)",
+  },
+
+  BUTTON: {
+    PRIMARY: "#000000",
+    PRIMARY_HOVER: "#333333",
+    SECONDARY: "#1B64F3",
+    SECONDARY_HOVER: "#1470D1",
+    DISABLED: "#E0E0E0",
+    DANGER: "#D32F2F",
+  },
+
+  INPUT: {
+    TEXT: "#212529",
+    BORDER: "#E5E7EB",
+    PLACEHOLDER: "#6C757D",
+    FOCUS_BORDER: "#2047AB",
+    ERROR_BORDER: "#F44336",
+  },
+
+  ICON: {
+    DEFAULT: "#4B4B4C",
+    DANGER: "#D32F2F",
+    ACTIVE: "#1CAC78",
+  },
+
+  BORDER: {
+    DEFAULT: "#F0F0F0",
+    ACTIVE: "#1CAC78",
+    DANGER: "#F44336",
+  },
+};
