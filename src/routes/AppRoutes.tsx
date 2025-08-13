@@ -1,28 +1,26 @@
 import { Routes, Route, Navigate } from "react-router-dom";
-import { ChatRoom, Dashboard, Login, Signup } from "../pages";
+import { Dashboard, Login, Signup } from "../pages";
 import { ROUTES } from "../constant";
 import PublicRoutes from "./PublicRoutes";
 import ProtectedRoute from "./ProtectedRoutes";
 
 const AppRoutes = () => {
-    return (
-        <Routes>
-            <Route element={<PublicRoutes />}>
-                <Route path={ROUTES.LOGIN} element={<Login />} />
-                <Route path={ROUTES.SIGNUP} element={<Signup />} />
-            </Route>
+  return (
+    <Routes>
+      <Route element={<PublicRoutes />}>
+        <Route path={ROUTES.LOGIN} element={<Login />} />
+        <Route path={ROUTES.SIGNUP} element={<Signup />} />
+      </Route>
 
-            <Route element={<ProtectedRoute />}>
-                <Route path={ROUTES.DASHBOARD} element={<Dashboard />} />
-                <Route path={ROUTES.CHAT} element={<ChatRoom />} />
-            </Route>
+      <Route element={<ProtectedRoute />}>
+        <Route path={ROUTES.DASHBOARD} element={<Dashboard />} />
+      </Route>
 
-            <Route path="/" element={<Navigate to={ROUTES.LOGIN} />} />
+      <Route path="/" element={<Navigate to={ROUTES.LOGIN} />} />
 
-            <Route path="*" element={<h1>404 - Page Not Found</h1>} />
-        </Routes>
-
-    );
+      <Route path="*" element={<h1>404 - Page Not Found</h1>} />
+    </Routes>
+  );
 };
 
 export default AppRoutes;

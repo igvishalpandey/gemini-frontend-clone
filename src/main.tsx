@@ -8,7 +8,7 @@ import { store } from "./store/index.ts";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <div className="h-screen text-black bg-gray-50 dark:bg-zinc-900 ">
+    <div className="h-screen text-black bg-zinc-50 dark:bg-zinc-900 ">
       <Provider store={store}>
         <BrowserRouter >
           <App />

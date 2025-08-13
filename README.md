@@ -1,69 +1,81 @@
-# React + TypeScript + Vite
+# Gemini Frontend Clone
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[![Live Demo](https://img.shields.io/badge/demo-live-brightgreen)](https://gemini-frontend-clone-sigma.vercel.app/login)
 
-Currently, two official plugins are available:
+A modern Gemini AI chatbot interface like clone built with React, Vite, and Tailwind CSS. Features responsive design, real-time chat, and seamless state management with Redux Toolkit.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![Chat Interface](./demo.png)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🚀 Project Overview
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+This project replicates the core functionality of Google's Gemini AI interface with:
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- Real-time AI-powered conversations
+- Responsive design for all devices
+- Dark/light theme support
+- Form validation and error handling with React Hook Form & Zod
+- Persistent chat history using localStorage
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+**Live Demo:** [https://gemini-frontend-clone-sigma.vercel.app/login](https://gemini-frontend-clone-sigma.vercel.app/login)  
+
+---
+
+## 🛠️ Setup and Run Instructions
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/akyllus/gemini-frontend-clone.git
+   cd gemini-frontend-clone
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+3. **Run development server:**
+   ```bash
+   npm run dev
+   ```
+   App will be available at [http://localhost:5173](http://localhost:5173)
+
+5. **Production build:**
+   ```bash
+   npm run build
+   npm run preview
+   ```
+
+---
+
+## 📁 Project Structure
+
 ```
+/gemini-frontend-clone
+├── /src
+│   ├── /components //components
+│   ├── /constant //global contstant and Toast Messages
+│   ├── /hooks //custom hooks
+│   ├── /pages //signup, signin and Dashboard Page
+│   ├── /services //API calls
+│   └── main.jsx                # App entry point
+├── vite.config.js              # Vite configurationsetup
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+🛠️ Technologies Used
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- **Core:** React 19, Vite
+- **State Management:** Redux Toolkit
+- **Styling:** Tailwind CSS 
+- **UI Components:** Material UI Icons
+- **Form Handling:** React Hook Form + Zod
+- **Notifications:** React Hot Toast
+- **Routing:** React Router DOM
+
+
+
+## 📜 License
+
+Create by: Vishal Pandey 
+          igvishalpandey@gmail.com

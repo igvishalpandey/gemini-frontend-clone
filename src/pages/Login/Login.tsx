@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
@@ -7,7 +7,7 @@ import { fetchCountries, getDefaultCountryCode } from "../../services";
 import { PhoneInput } from "../../components";
 import toast from "react-hot-toast";
 import { Link } from "react-router-dom";
-import { ROUTES } from "../../constant";
+import { ROUTES, TOAST_MESSAGES } from "../../constant";
 import { CircularProgress } from "@mui/material";
 import { useDispatch } from "react-redux";
 import { login } from "../../store/Slices/authSlice";
@@ -26,7 +26,7 @@ const phoneSchema = z.object({
     .regex(/^\d+$/, "Only numbers allowed"),
 });
 
-const Login: React.FC = () => {
+const Login = () => {
   const dispatch = useDispatch();
   const [countries, setCountries] = useState<Country[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
@@ -55,8 +55,8 @@ const Login: React.FC = () => {
         });
       }
     } catch (error) {
-      toast.error("Failed to load countries");
-      console.error("Error loading countries:", error);
+      toast.error(TOAST_MESSAGES.ERROR_LOAD_COUNTRIES);
+      console.error(TOAST_MESSAGES.ERROR_LOAD_COUNTRIES, error);
     } finally {
       setLoading(false);
     }
@@ -70,9 +70,9 @@ const Login: React.FC = () => {
     (data: FormData) => {
       setLoading(true);
       const fullPhone = `${data.countryCode}${data.phoneNumber}`;
-      toast.success("OTP sent successfully");
+      toast.success(TOAST_MESSAGES.OTP_SENT_SUCCESS);
       setTimeout(() => {
-        toast.success(`Logged in with ${fullPhone}`);
+        toast.success(TOAST_MESSAGES.LOGIN_SUCCESS);
         dispatch(login(fullPhone));
         setLoading(false);
       }, 1500);
