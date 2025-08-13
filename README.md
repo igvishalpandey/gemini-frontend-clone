@@ -54,11 +54,11 @@ This project replicates the core functionality of Google's Gemini AI interface w
 ```
 /gemini-frontend-clone
 ├── /src
-│   ├── /components //components
-│   ├── /constant //global contstant and Toast Messages
-│   ├── /hooks //custom hooks
-│   ├── /pages //signup, signin and Dashboard Page
-│   ├── /services //API calls
+│   ├── /components             #components
+│   ├── /constant               #global contstant and Toast Messages
+│   ├── /hooks                  #custom hooks
+│   ├── /pages                  #signup, signin and Dashboard Page
+│   ├── /services               #API calls
 │   └── main.jsx                # App entry point
 ├── vite.config.js              # Vite configurationsetup
 
